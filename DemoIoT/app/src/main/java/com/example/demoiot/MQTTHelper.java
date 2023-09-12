@@ -17,8 +17,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class MQTTHelper {
     public MqttAndroidClient mqttAndroidClient;
 
-    public final String[] arrayTopics = {"nkkha/feeds/cambien1", "nkkha/feeds/cambien2"};
-
+    final String[] arrayTopics = Constants.kTopics;
     final String clientId = Constants.kClientId;
     final String username = Constants.kUsername;
     final String password = Constants.kPassword;
@@ -77,7 +76,7 @@ public class MQTTHelper {
 
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    Log.w("Mqtt", "Failed to connect to: " + serverUri + exception.toString());
+                    Log.w("Mq  tt", "Failed to connect to: " + serverUri + exception.toString());
                 }
             });
 
