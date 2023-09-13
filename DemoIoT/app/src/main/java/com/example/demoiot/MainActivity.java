@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("TEST", topic + "***" + message.toString());
                 if (topic.contains("cambien1"))
                     txtTemp.setText(message + "°C");
-                else if (topic.contains("cambien2"))
+                else if (topic.contains("cambien3"))
                     txtHumi.setText(message + "%");
                 else if (topic.contains("nutnhan1"))
                     btnLED.setOn(message.toString().equals("1"));
