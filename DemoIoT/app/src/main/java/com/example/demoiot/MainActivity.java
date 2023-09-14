@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         btnLED = findViewById(R.id.btnLED);
         btnPUMP = findViewById(R.id.btnPUMP);
 
-        btnPUMP.setOnToggledListener((toggleableView, isOn) -> sendDataMQTT(Constants.kTopics[0], isOn ? "1" : "0"));
-        btnLED.setOnToggledListener((toggleableView, isOn) -> sendDataMQTT(Constants.kTopics[1], isOn ? "1" : "0"));
+        btnLED.setOnToggledListener((toggleableView, isOn) -> sendDataMQTT(Constants.kTopics[2], isOn ? "1" : "0"));
+        btnPUMP.setOnToggledListener((toggleableView, isOn) -> sendDataMQTT(Constants.kTopics[3], isOn ? "1" : "0"));
 
         startMQTT();
     }
