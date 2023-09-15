@@ -8,7 +8,7 @@ from physical import *
 
 AIO_FEED_IDS = ["nutnhan1","nutnhan2"]
 AIO_USERNAME = "nkkha"
-AIO_KEY = "aio_jRkU73Nm9px7stkImEiFt92udZtw"
+AIO_KEY = ""
 
 def connected(client):
     print("Ket noi thanh cong ...")
