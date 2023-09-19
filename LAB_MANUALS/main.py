@@ -2,13 +2,18 @@ import sys
 from Adafruit_IO import MQTTClient
 import time
 import random
+import requests
+
 # from simple_ai import *
 # from uart import *
 from physical import *
+from eval_testing import *
 
-AIO_FEED_IDS = ["nutnhan1","nutnhan2"]
+AIO_FEED_IDS = ["nutnhan1", "nutnhan2", "equation"]
 AIO_USERNAME = "nkkha"
 AIO_KEY = ""
+
+global_equation = ""
 
 def connected(client):
     print("Ket noi thanh cong ...")
@@ -36,6 +41,18 @@ def message(client , feed_id , payload):
         # else:
         #     writeData(4)
         setDevice2(payload == "1")
+    elif feed_id == "equation":
+        global_equation = payload
+        print(global_equation)
+        
+def init_global_equation():
+    headers = {}
+    aio_url = "https://io.adafruit.com/api/v2/nkkha/feeds/equation"
+    x = requests.get(url=aio_url, headers=headers,verify=False)
+    data = x.json()
+    global_equation = data["last_value"]
+    print("Get lastest value: ", global_equation)
+    return global_equation
             
             
 client = MQTTClient(AIO_USERNAME , AIO_KEY)
@@ -50,6 +67,8 @@ counter = 10
 counter_ai = 5
 sensor_type = 0
 previous_result = ""
+
+equa = init_global_equation()
 
 while True:
     # counter -= 1
@@ -85,12 +104,28 @@ while True:
 
     # readSerial(client)
     
-    temp = readTemperature()
-    mois = readMoisture()
-    print("Nhiet do: " + str(temp / 100) + "°C")
-    print("Do am: " + str(mois) + "%")
-    client.publish("cambien1", temp / 100)
-    client.publish("cambien3", mois)
+    # temp = readTemperature()
+    # mois = readMoisture()
+    # print("Nhiet do: " + str(temp / 100) + "°C")
+    # print("Do am: " + str(mois) + "%")
+    # client.publish("cambien1", temp / 100)
+    # client.publish("cambien3", mois)
+            
+    counter_ai -= 1
+    if counter_ai <= 0:
+        counter_ai = 5
+                
+        x1 = random.randint(0, 10)
+        x2 = random.randint(0, 10)
+        x3 = random.randint(0, 10)
 
+        result = modify_value(x1=x1, x2=x2,x3=x3,equa=equa)
+        print("x1 = ", x1)
+        print("x2 = ", x2)
+        print("x3 = ", x3)
+
+        print("x1 + x2 + x3 = ", result)
+        client.publish("cambien2", result)
+            
     time.sleep(1)
     pass
