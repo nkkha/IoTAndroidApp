@@ -1,7 +1,7 @@
 print("Hello LAB3")
 import time
 from scheduler import *
-from ui import *
+import ui
 
 from task2 import *
 from task3 import *
@@ -20,5 +20,5 @@ scheduler.SCH_Add_Task(task3.Task3_Run, 3000,5000)
 while True:
     scheduler.SCH_Update()
     scheduler.SCH_Dispatch_Tasks()
-    window.update()
+    ui.window.update()
     time.sleep(0.1)
