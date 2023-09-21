@@ -20,23 +20,33 @@ def onClick():
     StudentController().insertStudent(aStudent)
     return
 
+import tkinter as tk
+
+def onClick():
+    # Add your save logic here
+    pass
+
 window = tk.Tk()
 window.title("Python App")
-window.geometry("600x400")
+window.attributes('-fullscreen', True)
 
-labelA=tk.Label(text="Student Name:")
-labelA.place(x=5,y=5,width=80,height=30)
+frame = tk.Frame(window)
+frame.pack(fill=tk.BOTH, expand=True)
 
-txtA=tk.Text()
-txtA.place(x=85,y=5,width=100,height=30)
+labelA = tk.Label(frame, text="Student Name:")
+labelA.grid(row=0, column=0, padx=10, pady=10)
+txtA = tk.Text(frame, height=1, width=20)
+txtA.grid(row=0, column=1, padx=10, pady=10)
 
-labelB=tk.Label(text="Student Age:")
-labelB.place(x=5,y=35,width=80,height=30)
+labelB = tk.Label(frame, text="Student Age:")
+labelB.grid(row=1, column=0, padx=10, pady=10)
+txtB = tk.Text(frame, height=1, width=20)
+txtB.grid(row=1, column=1, padx=10, pady=10)
 
-txtB=tk.Text()
-txtB.place(x=85,y=35,width=100,height=30)
+button = tk.Button(frame, text="Save", command=onClick)
+button.grid(row=2, column=0, columnspan=2, pady=20)
 
-button = tk.Button(text="Save",command=onClick)
-button.place(x=85,y=70,width=100,height=30)
+window.mainloop()
 
-# window.mainloop()
+
+window.mainloop()
