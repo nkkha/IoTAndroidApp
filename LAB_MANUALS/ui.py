@@ -6,7 +6,7 @@ def update_temperature_humidity():
     temp = readTemperature()
     humi = readMoisture()
     temperature_label.config(text=f"Temperature: {temp / 100} °C")
-    humidity_label.config(text=f"Humidity: {humi}%")
+    humidity_label.config(text=f"Humidity: {humi / 100}%")
     
     window.after(2000, update_temperature_humidity)
 
