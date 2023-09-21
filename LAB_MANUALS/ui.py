@@ -5,7 +5,7 @@ from physical import *
 def update_temperature_humidity():
     temp = readTemperature()
     humi = readMoisture()
-    temperature_label.config(text=f"Temperature: {temp} °C")
+    temperature_label.config(text=f"Temperature: {temp / 100} °C")
     humidity_label.config(text=f"Humidity: {humi}%")
     
     window.after(2000, update_temperature_humidity)
@@ -21,3 +21,5 @@ humidity_label = tk.Label(window, text="Humidity: --%", font=("Helvetica", 24))
 humidity_label.pack(pady=20)
 
 update_temperature_humidity()
+
+window.mainloop()
