@@ -4,15 +4,15 @@ import time
 import random
 import requests
 
-# from simple_ai import *
+from simple_ai import *
 # from uart import *
-from physical import *
-from eval_testing import *
+# from physical import *
+# from eval_testing import *
 from ui import *
 
 AIO_FEED_IDS = ["nutnhan1", "nutnhan2", "equation"]
 AIO_USERNAME = "nkkha"
-AIO_KEY = ""
+AIO_KEY = "aio_byzK88kfrtsWQehi9VPTIfzxHwAZ"
 
 global_equation = ""
 
@@ -36,12 +36,14 @@ def message(client , feed_id , payload):
         # else:
         #     writeData(2)
         setDevice1(payload == "1")
+        print("nutnhan1")
     elif feed_id == "nutnhan2":
         # if payload == "0":
         #     writeData(3)
         # else:
         #     writeData(4)
         setDevice2(payload == "1")
+        print("nutnhan2")
     elif feed_id == "equation":
         global_equation = payload
         print(global_equation)
@@ -69,7 +71,7 @@ counter_ai = 5
 sensor_type = 0
 previous_result = ""
 
-equa = init_global_equation()
+# equa = init_global_equation()
 
 while True:
     # counter -= 1
@@ -112,21 +114,21 @@ while True:
     # client.publish("cambien1", temp / 100)
     # client.publish("cambien3", mois)
             
-    counter_ai -= 1
-    if counter_ai <= 0:
-        counter_ai = 5
+    # counter_ai -= 1
+    # if counter_ai <= 0:
+    #     counter_ai = 5
                 
-        x1 = random.randint(0, 10)
-        x2 = random.randint(0, 10)
-        x3 = random.randint(0, 10)
+    #     x1 = random.randint(0, 10)
+    #     x2 = random.randint(0, 10)
+    #     x3 = random.randint(0, 10)
 
-        result = modify_value(x1=x1, x2=x2,x3=x3,equa=equa)
-        print("x1 = ", x1)
-        print("x2 = ", x2)
-        print("x3 = ", x3)
+    #     result = modify_value(x1=x1, x2=x2,x3=x3,equa=equa)
+    #     print("x1 = ", x1)
+    #     print("x2 = ", x2)
+    #     print("x3 = ", x3)
 
-        print("x1 + x2 + x3 = ", result)
-        client.publish("cambien2", result)
+    #     print("x1 + x2 + x3 = ", result)
+    #     client.publish("cambien2", result)
             
     time.sleep(1)
     pass

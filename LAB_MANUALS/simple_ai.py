@@ -7,7 +7,7 @@ import base64
 np.set_printoptions(suppress=True)
 
 # Load the model
-model = load_model("keras_Model.h5", compile=False)
+model = load_model("/Users/nkkha/Documents/IoTLab/LAB_MANUALS/keras_model.h5", compile=False)
 
 # Load the labels
 class_names = ["0 DEO KHAU TRANG", "1 KHONG DEO KHAU TRANG", "2 KHONG CO NGUOI"]
@@ -19,7 +19,6 @@ camera = cv2.VideoCapture(0)
 def image_detector():
     # Grab the webcamera's image.
     ret, image = camera.read()
-
     res, frame = cv2.imencode('.jpg', image)
     data = base64.b64encode(frame)
     print(len(data))
