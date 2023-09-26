@@ -1,0 +1,16 @@
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Turn on the meeting room light." },{ "role": "assistant", "content": "The meeting room light is on." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Turn on the meeting room light, please." },{ "role": "assistant", "content": "The meeting room light is on." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Turn off the meeting room light." },{ "role": "assistant", "content": "The meeting room light is off." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Turn off the meeting room light, please." },{ "role": "assistant", "content": "The meeting room light is off." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "The meeting room light on." },{ "role": "assistant", "content": "The meeting room light is on." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "The meeting room light on, please." },{ "role": "assistant", "content": "The meeting room light is on." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "The meeting room light off." },{ "role": "assistant", "content": "The meeting room light is off." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "The meeting room light off, please." },{ "role": "assistant", "content": "The meeting room light is off." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Mở đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã mở." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Hãy mở đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã mờ." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Tắt đèn phòng họp." },{ "role": "assistant", "content": "Dèn phòng họp đã tắt." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Hãy tắt đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã tắt." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Mở đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã mở." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Hãy mở đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã mờ." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Tắt đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã tắt." }]}
+{"messages": [{ "role": "system", "content": "You are a home assistant." },{ "role": "user", "content": "Hãy tắt đèn phòng họp." },{ "role": "assistant", "content": "Đèn phòng họp đã tắt." }]}
