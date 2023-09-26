@@ -6,7 +6,7 @@ import requests
 
 # from simple_ai import *
 # from uart import *
-# from physical import *
+from physical import *
 # from eval_testing import *
 from ui import *
 
