@@ -20,6 +20,6 @@ temperature_label.pack(pady=20)
 humidity_label = tk.Label(window, text="Humidity: --%", font=("Helvetica", 24))
 humidity_label.pack(pady=20)
 
-# update_temperature_humidity()
+update_temperature_humidity()
 
-# window.mainloop()
+window.mainloop()

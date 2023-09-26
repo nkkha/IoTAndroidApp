@@ -12,7 +12,7 @@ from ui import *
 
 AIO_FEED_IDS = ["nutnhan1", "nutnhan2", "equation"]
 AIO_USERNAME = "nkkha"
-AIO_KEY = "aio_byzK88kfrtsWQehi9VPTIfzxHwAZ"
+AIO_KEY = ""
 
 global_equation = ""
 
