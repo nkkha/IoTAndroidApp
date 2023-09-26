@@ -4,7 +4,7 @@ import time
 import random
 import requests
 
-from simple_ai import *
+# from simple_ai import *
 # from uart import *
 # from physical import *
 # from eval_testing import *
